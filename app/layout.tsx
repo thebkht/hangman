@@ -1,6 +1,6 @@
 import "./globals.css"
 import { Metadata, Viewport } from "next"
-
+import { Analytics } from "@vercel/analytics/react"
 import { siteConfig } from "@/config/site"
 import { fontSans } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
@@ -84,6 +84,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
               <div className="relative flex min-h-screen flex-col bg-background">
                 {children}
               </div>
+              <Analytics />
             </div>
           </ThemeProvider>
         </body>
