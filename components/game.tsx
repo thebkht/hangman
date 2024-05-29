@@ -29,7 +29,7 @@ export default function Game() {
 
           // Check for win
           word.split("").forEach((letter) => {
-               if (!correct.includes(letter)) {
+               if (!correct.includes(letter.toLowerCase())) {
                     status = "";
                }
           });
