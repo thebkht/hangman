@@ -93,10 +93,10 @@ export default function Game() {
      return (
           <>
                <Header onClick={playAgain} />
-               <div className="container p-20 justify-center items-center flex flex-col gap-6">
+               <div className="container p-8 lg:p-20 justify-center items-center flex flex-col gap-6">
                     <Figure wrongLetters={wrongLetters} />
                     <Word selectedWord={selectedWord} correctLetters={correctLetters} />
-                    <div className="flex gap-2 w-1/2 mt-4 flex-wrap relative">{buttons}</div>
+                    <div className="flex gap-2 w-full md:w-1/2 mt-4 flex-wrap relative">{buttons}</div>
                     <Alert message={finalMessage} playAgain={playAgain} open={showNotification} onOpenChange={setShowNotification} desc={checkWin(correctLetters, wrongLetters, selectedWord) === "lose" ? `...the word was: ${selectedWord}` : ""} />
                </div>
           </>
