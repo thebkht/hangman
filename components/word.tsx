@@ -12,16 +12,13 @@ const Word = ({ selectedWord, correctLetters }: { selectedWord: string, correctL
 
      return (
           <>
-               <InputOTP maxLength={word.length} value={word}>
+               <InputOTP maxLength={word.length} value={word} className="my-8">
                     <InputOTPGroup>
                          {selectedWord.split("").map((letter, index) => (
-                              <InputOTPSlot key={index} index={index} />
+                              <InputOTPSlot className="h-12 w-12 text-lg" key={index} index={index} />
                          ))}
                     </InputOTPGroup>
                </InputOTP>
-               <p>{selectedWord}</p>
-               <p>{word}</p>
-               {correctLetters}
           </>
      )
 }
