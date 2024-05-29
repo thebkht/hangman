@@ -21,7 +21,8 @@ export default function Game() {
           setCorrectLetters([]);
           setWrongLetters([]);
           const random = Math.floor(Math.random() * list.length);
-          setSelectedWord(list[random]);
+
+          setSelectedWord(list[random].toLowerCase());
      }
 
      function checkWin(correct: string[], wrong: string[], word: string) {

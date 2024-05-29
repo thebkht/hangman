@@ -34,6 +34,7 @@ export async function GET(_: Request): Promise<Response> {
 
     return new Response(JSON.stringify(response), { status: 200 });
   } catch (error) {
-    return new Response((error as Error).toString(), { status: 500 });
+    console.error((error as Error).message);
+    return new Response("Internal server error", { status: 500 });
   }
 }
