@@ -52,7 +52,7 @@ export default function Game() {
                     }
                     onClick={() => {
                          const letter = String.fromCharCode(i).toLowerCase();
-                         if (selectedWord.includes(letter)) {
+                         if (selectedWord.toLowerCase().includes(letter)) {
                               if (!correctLetters.includes(letter)) {
                                    setCorrectLetters((current) => [...current, letter]);
                               } else {
